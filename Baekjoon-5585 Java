@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Practice {
+    public static int func(int pay) {
+        int cha = 1000 - pay, su = 0, max = 500;
+
+        while(cha != 0) {
+            if(max > cha)
+            {
+                if(max == 500)
+                    max = 100;
+                else if(max == 100)
+                    max = 50;
+                else if(max == 50)
+                    max = 10;
+                else if(max == 10)
+                    max = 5;
+                else if(max == 5)
+                    max = 1;
+            }
+            else {
+                int i = cha / max;
+                cha = cha - (max * i);
+                su += i;
+            }
+        }
+        return su;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int pay = input.nextInt();
+        System.out.println(func(pay));
+
+    }
+
+}
