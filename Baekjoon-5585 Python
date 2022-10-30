@@ -1,0 +1,10 @@
+cha = 1000 - int(input())  # 순서도 1, 2
+money, su = [500, 100, 50, 10, 5, 1], 0 # 가지고 있는 거스름돈(리스트)과 잔돈이 포함된 매수 선언
+
+while cha != 0:  # 순서도 3 실행
+    whilesu = cha // max(money)
+    cha = cha - (max(money) * whilesu)
+    su += whilesu
+    del money[0]
+
+print(su)
