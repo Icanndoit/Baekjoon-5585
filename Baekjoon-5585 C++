@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main(void) {
+	int arr[] = { 500, 100, 50, 10, 5, 1 };
+	int pay, cha, su = 0, i = 0;
+	
+	cin >> pay;
+	cha = 1000 - pay;
+
+	while (cha != 0) {
+		if (arr[i] > cha)
+			i += 1;
+		else {
+			int a = cha / arr[i];
+			cha = cha - (a * arr[i]);
+			su += a;
+		}
+	}
+	cout << su << endl;
+
+	return 0;
+}
