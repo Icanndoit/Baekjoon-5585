@@ -1,0 +1,22 @@
+
+int func(int pay) {
+	int su = 0, cha = 1000 - pay, i = 0;
+	int arr[] = {500, 100, 50, 10, 5, 1};
+
+	while (cha != 0) {
+		int a = cha / arr[i];
+		cha -= (a * arr[i]);
+		su += a;
+		i++;
+	}
+	return su;
+}
+
+int main(void) {
+	int pay;
+
+	scanf("%d", &pay);
+	printf("%d\n", func(pay));
+
+	return 0;
+}
